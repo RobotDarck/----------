@@ -97,13 +97,16 @@ let inp1 = lush.getElementsByClassName('inp1')[0]
 let inp2 = lush.getElementsByClassName('inp2')[0]
 massa = [[inp1, '<head>'], [inp2, '<body>']]
 
+function remover(){
+    but1.remove()
+    but2.remove()
+    but3.remove()
+}
 
 //сдача результата или возвращение назад
 but4.addEventListener('click', function(){
     if (answer != 1){
-        but1.remove()
-        but2.remove()
-        but3.remove()
+        remover()
         var codeword = Math.floor(Math.random() * 18)
         buttons.appendChild(code)
         code.textContent = codes[codeword]
@@ -133,9 +136,7 @@ but4.addEventListener('click', function(){
 but1.addEventListener('click', function(){
     activ = 1
     if(but1res == false){
-    but1.remove()
-    but2.remove()
-    but3.remove()
+    remover()
     buttons.appendChild(fone)
     but4.textContent = 'Назад'
     answer = 1
@@ -150,9 +151,7 @@ but1.addEventListener('click', function(){
 but2.addEventListener('click', function(){
     activ = 2
     if(but2res == false){
-    but1.remove()
-    but2.remove()
-    but3.remove()
+    remover()
     buttons.appendChild(liner)
     but4.textContent = 'Назад'
     answer = 1
@@ -167,9 +166,7 @@ but2.addEventListener('click', function(){
 but3.addEventListener('click', function(){
     activ = 2
     if(but2res == false){
-    but1.remove()
-    but2.remove()
-    but3.remove()
+    remover()
     buttons.appendChild(liner)
     but4.textContent = 'Назад'
     answer = 1
@@ -207,15 +204,14 @@ left1.addEventListener('click', function(){
     if (section == 1){
         section = 'left'
         var cords = left1.getBoundingClientRect()
-        pointAX = cords.x
-        pointAY = cords.y
-        console.log(a)
+        pointBX = cords.x
+        pointBY = cords.y
     }
     else {
         if(section != 'left'){
             var cords = left1.getBoundingClientRect()
-            pointBX = cords.x
-            pointBY = cords.y
+            pointAX = cords.x
+            pointAY = cords.y
             section = 1
         }
         else{
@@ -231,16 +227,15 @@ left1.addEventListener('click', function(){
 left2.addEventListener('click', function(){
     if (section == 1){
         section = 'left'
-        var cords = left1.getBoundingClientRect()
-        pointAX = cords.x
-        pointAY = cords.y
-        console.log(a)
+        var cords = left2.getBoundingClientRect()
+        pointBX = cords.x
+        pointBY = cords.y
     }
     else {
         if(section != 'left'){
-            var cords = left1.getBoundingClientRect()
-            pointBX = cords.x
-            pointBY = cords.y
+            var cords = left2.getBoundingClientRect()
+            pointAX = cords.x
+            pointAY = cords.y
             section = 1
         }
         else{
@@ -256,16 +251,15 @@ left2.addEventListener('click', function(){
 left3.addEventListener('click', function(){
     if (section == 1){
         section = 'left'
-        var cords = left1.getBoundingClientRect()
-        pointAX = cords.x
-        pointAY = cords.y
-        console.log(a)
+        var cords = left3.getBoundingClientRect()
+        pointBX = cords.x
+        pointBY = cords.y
     }
     else {
         if(section != 'left'){
-            var cords = left1.getBoundingClientRect()
-            pointBX = cords.x
-            pointBY = cords.y
+            var cords = left3.getBoundingClientRect()
+            pointAX = cords.x
+            pointAY = cords.y
             section = 1
         }
         else{
