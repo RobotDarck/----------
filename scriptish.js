@@ -219,7 +219,7 @@ left1.addEventListener('click', function(){
             pointAX = 0
             pointAY = 0
             errorType = 2
-            SendMessage(1)
+            SendMessage(2)
         }
     }
 })
@@ -243,7 +243,7 @@ left2.addEventListener('click', function(){
             pointAX = 0
             pointAY = 0
             errorType = 2
-            SendMessage(1)
+            SendMessage(2)
         }
     }
 })
@@ -267,11 +267,82 @@ left3.addEventListener('click', function(){
             pointAX = 0
             pointAY = 0
             errorType = 2
-            SendMessage(1)
+            SendMessage(2)
         }
     }
 })
 
+right1.addEventListener('click', function(){
+    if (section == 1){
+        section = 'right'
+        var cords = right1.getBoundingClientRect()
+        pointBX = cords.x
+        pointBY = cords.y
+    }
+    else {
+        if(section != 'right'){
+            var cords = left1.getBoundingClientRect()
+            pointAX = cords.x
+            pointAY = cords.y
+            section = 1
+        }
+        else{
+            section = 1
+            pointAX = 0
+            pointAY = 0
+            errorType = 2
+            SendMessage(2)
+        }
+    }
+})
+
+right2.addEventListener('click', function(){
+    if (section == 1){
+        section = 'right'
+        var cords = right2.getBoundingClientRect()
+        pointBX = cords.x
+        pointBY = cords.y
+    }
+    else {
+        if(section != 'right'){
+            var cords = left1.getBoundingClientRect()
+            pointAX = cords.x
+            pointAY = cords.y
+            section = 1
+        }
+        else{
+            section = 1
+            pointAX = 0
+            pointAY = 0
+            errorType = 2
+            SendMessage(2)
+        }
+    }
+})
+
+right3.addEventListener('click', function(){
+    if (section == 1){
+        section = 'right'
+        var cords = right3.getBoundingClientRect()
+        pointBX = cords.x
+        pointBY = cords.y
+    }
+    else {
+        if(section != 'right'){
+            var cords = left1.getBoundingClientRect()
+            pointAX = cords.x
+            pointAY = cords.y
+            section = 1
+        }
+        else{
+            section = 1
+            pointAX = 0
+            pointAY = 0
+            errorType = 2
+            SendMessage(2)
+        }
+    }
+})
 
 //Всплывающие окна
 function SendMessage(i){
@@ -284,7 +355,7 @@ function SendMessage(i){
             helpbar.remove();  
         }, 3000);
     }
-    else if(errorType == 1){
+    else if(errorType == 2){
         var helpbar = document.createElement('div')
         helpbar.className = 'helpbar'
         helpbar.innerText = "Неправильно, попробуйте ещё раз"
