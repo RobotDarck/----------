@@ -145,6 +145,8 @@ body{
 }
 
 .rightcol{
+    position: absolute;
+    right: 230px;
     height: 100%;
     width: 30%;
     margin: 10px;
@@ -171,6 +173,8 @@ body{
 }
 
 .leftcol{
+    position: absolute;
+    left: 230px;
     height: 100%;
     width: 30%;
     margin: 10px;

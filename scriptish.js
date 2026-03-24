@@ -11,9 +11,12 @@ let fone = document.createElement('div')
 let lush = document.createElement('lu')
 let butres = document.createElement('button')
 let liner = document.createElement('div')
+let canvas = document.createElement('canvas')
 let rigtCollum = document.createElement('div')
 let leftCollum = document.createElement('div')
+let ctx = canvas.getContext("2d")
 
+liner.appendChild(canvas)
 liner.appendChild(rigtCollum)
 liner.appendChild(leftCollum)
 fone.appendChild(lush)
@@ -206,6 +209,7 @@ left1.addEventListener('click', function(){
         var cords = left1.getBoundingClientRect()
         pointBX = cords.x
         pointBY = cords.y
+        console.log(cords)
     }
     else {
         if(section != 'left'){
@@ -213,6 +217,12 @@ left1.addEventListener('click', function(){
             pointAX = cords.x
             pointAY = cords.y
             section = 1
+            ctx.moveTo(pointAX, pointAY)
+            ctx.lineTo(pointBX, pointBY)
+            ctx.lineTo(pointBX, pointBY + 5)
+            ctx.lineTo(pointAX, pointAY + 5)
+            ctx.fill()
+            console.log(cords)
         }
         else{
             section = 1
@@ -230,6 +240,7 @@ left2.addEventListener('click', function(){
         var cords = left2.getBoundingClientRect()
         pointBX = cords.x
         pointBY = cords.y
+        console.log(cords)
     }
     else {
         if(section != 'left'){
@@ -237,6 +248,12 @@ left2.addEventListener('click', function(){
             pointAX = cords.x
             pointAY = cords.y
             section = 1
+            ctx.moveTo(pointAX, pointAY)
+            ctx.lineTo(pointBX, pointBY)
+            ctx.lineTo(pointBX, pointBY + 5)
+            ctx.lineTo(pointAX, pointAY + 5)
+            ctx.fill()
+            console.log(cords)
         }
         else{
             section = 1
@@ -254,6 +271,7 @@ left3.addEventListener('click', function(){
         var cords = left3.getBoundingClientRect()
         pointBX = cords.x
         pointBY = cords.y
+        console.log(cords)
     }
     else {
         if(section != 'left'){
@@ -261,6 +279,12 @@ left3.addEventListener('click', function(){
             pointAX = cords.x
             pointAY = cords.y
             section = 1
+            ctx.moveTo(pointAX, pointAY)
+            ctx.lineTo(pointBX, pointBY)
+            ctx.lineTo(pointBX, pointBY + 5)
+            ctx.lineTo(pointAX, pointAY + 5)
+            ctx.fill()
+            console.log(cords)
         }
         else{
             section = 1
@@ -278,6 +302,7 @@ right1.addEventListener('click', function(){
         var cords = right1.getBoundingClientRect()
         pointBX = cords.x
         pointBY = cords.y
+        console.log(cords)
     }
     else {
         if(section != 'right'){
@@ -285,6 +310,12 @@ right1.addEventListener('click', function(){
             pointAX = cords.x
             pointAY = cords.y
             section = 1
+            ctx.moveTo(pointBX, pointBY)
+            ctx.lineTo(pointAX, pointAY)
+            ctx.lineTo(pointAX, pointAY + 5)
+            ctx.lineTo(pointBX, pointBY + 5)
+            ctx.fill()
+            console.log(cords)
         }
         else{
             section = 1
@@ -302,6 +333,7 @@ right2.addEventListener('click', function(){
         var cords = right2.getBoundingClientRect()
         pointBX = cords.x
         pointBY = cords.y
+        console.log(cords)
     }
     else {
         if(section != 'right'){
@@ -309,6 +341,12 @@ right2.addEventListener('click', function(){
             pointAX = cords.x
             pointAY = cords.y
             section = 1
+            ctx.moveTo(pointBX, pointBY)
+            ctx.lineTo(pointAX, pointAY)
+            ctx.lineTo(pointAX, pointAY + 5)
+            ctx.lineTo(pointBX, pointBY + 5)
+            ctx.fill()
+            console.log(cords)
         }
         else{
             section = 1
@@ -326,6 +364,7 @@ right3.addEventListener('click', function(){
         var cords = right3.getBoundingClientRect()
         pointBX = cords.x
         pointBY = cords.y
+        console.log(cords)
     }
     else {
         if(section != 'right'){
@@ -333,6 +372,12 @@ right3.addEventListener('click', function(){
             pointAX = cords.x
             pointAY = cords.y
             section = 1
+            ctx.moveTo(pointBX, pointBY)
+            ctx.lineTo(pointAX, pointAY)
+            ctx.lineTo(pointAX, pointAY + 5)
+            ctx.lineTo(pointBX, pointBY + 5)
+            ctx.fill()
+            console.log(cords)
         }
         else{
             section = 1
