@@ -217,12 +217,25 @@ left1.addEventListener('click', function(){
             pointAX = cords.x
             pointAY = cords.y
             section = 1
-            ctx.moveTo(pointAX, pointAY)
-            ctx.lineTo(pointBX, pointBY)
-            ctx.lineTo(pointBX, pointBY + 5)
-            ctx.lineTo(pointAX, pointAY + 5)
-            ctx.fill()
-            console.log(cords)
+            if(pointAY > pointBY){
+                var cordY = pointBY + (pointAY - pointBY)
+                var cordX = pointBX / 2
+                var rec = document.createElement('div')
+                liner.appendChild(rec)
+                rec.className = 'rec'
+                rec.style.top = `${cordY}`
+                rec.style.left = `${cordX}`
+            }
+            else if(pointAY < pointBY){
+                var cordY = pointAY + (pointBY - pointAY);
+                var cordX = pointBX / 2;
+                var rec = document.createElement('div');
+                liner.appendChild(rec);
+                rec.className = 'rec';
+                rec.style.top = `${cordY}`;
+                rec.style.left = `${cordX}`;
+            };
+            console.log(cords);
         }
         else{
             section = 1
@@ -254,6 +267,24 @@ left2.addEventListener('click', function(){
             ctx.lineTo(pointAX, pointAY + 5)
             ctx.fill()
             console.log(cords)
+            if(pointAY > pointBY){
+                var cordY = pointBY + (pointAY - pointBY)
+                var cordX = pointBX / 2
+                var rec = document.createElement('div')
+                liner.appendChild(rec)
+                rec.className = 'rec'
+                rec.style.top = `${cordY}`
+                rec.style.left = `${cordX}`
+            }
+            else if(pointAY < pointBY){
+                var cordY = pointAY + (pointBY - pointAY);
+                var cordX = pointBX / 2;
+                var rec = document.createElement('div');
+                liner.appendChild(rec);
+                rec.className = 'rec';
+                rec.style.top = `${cordY}`;
+                rec.style.left = `${cordX}`;
+            };
         }
         else{
             section = 1
@@ -285,6 +316,24 @@ left3.addEventListener('click', function(){
             ctx.lineTo(pointAX, pointAY + 5)
             ctx.fill()
             console.log(cords)
+            if(pointAY > pointBY){
+                var cordY = pointBY + (pointAY - pointBY)
+                var cordX = pointBX / 2
+                var rec = document.createElement('div')
+                liner.appendChild(rec)
+                rec.className = 'rec'
+                rec.style.top = `${cordY}`
+                rec.style.left = `${cordX}`
+            }
+            else if(pointAY < pointBY){
+                var cordY = pointAY + (pointBY - pointAY);
+                var cordX = pointBX / 2;
+                var rec = document.createElement('div');
+                liner.appendChild(rec);
+                rec.className = 'rec';
+                rec.style.top = `${cordY}`;
+                rec.style.left = `${cordX}`;
+            };
         }
         else{
             section = 1
@@ -316,6 +365,24 @@ right1.addEventListener('click', function(){
             ctx.lineTo(pointBX, pointBY + 5)
             ctx.fill()
             console.log(cords)
+            if(pointAY > pointBY){
+                var cordY = pointBY + (pointAY - pointBY)
+                var cordX = pointBX / 2
+                var rec = document.createElement('div')
+                liner.appendChild(rec)
+                rec.className = 'rec'
+                rec.style.top = `${cordY}`
+                rec.style.left = `${cordX}`
+            }
+            else if(pointAY < pointBY){
+                var cordY = pointAY + (pointBY - pointAY);
+                var cordX = pointBX / 2;
+                var rec = document.createElement('div');
+                liner.appendChild(rec);
+                rec.className = 'rec';
+                rec.style.top = `${cordY}`;
+                rec.style.left = `${cordX}`;
+            };
         }
         else{
             section = 1
@@ -347,6 +414,24 @@ right2.addEventListener('click', function(){
             ctx.lineTo(pointBX, pointBY + 5)
             ctx.fill()
             console.log(cords)
+            if(pointAY > pointBY){
+                var cordY = pointBY + (pointAY - pointBY)
+                var cordX = pointBX / 2
+                var rec = document.createElement('div')
+                liner.appendChild(rec)
+                rec.className = 'rec'
+                rec.style.top = `${cordY}`
+                rec.style.left = `${cordX}`
+            }
+            else if(pointAY < pointBY){
+                var cordY = pointAY + (pointBY - pointAY);
+                var cordX = pointBX / 2;
+                var rec = document.createElement('div');
+                liner.appendChild(rec);
+                rec.className = 'rec';
+                rec.style.top = `${cordY}`;
+                rec.style.left = `${cordX}`;
+            };
         }
         else{
             section = 1
@@ -378,6 +463,24 @@ right3.addEventListener('click', function(){
             ctx.lineTo(pointBX, pointBY + 5)
             ctx.fill()
             console.log(cords)
+            if(pointAY > pointBY){
+                var cordY = pointBY + (pointAY - pointBY)
+                var cordX = pointBX / 2
+                var rec = document.createElement('div')
+                liner.appendChild(rec)
+                rec.className = 'rec'
+                rec.style.top = `${cordY}`
+                rec.style.left = `${cordX}`
+            }
+            else if(pointAY < pointBY){
+                var cordY = pointAY + (pointBY - pointAY);
+                var cordX = pointBX / 2;
+                var rec = document.createElement('div');
+                liner.appendChild(rec);
+                rec.className = 'rec';
+                rec.style.top = `${cordY}`;
+                rec.style.left = `${cordX}`;
+            };
         }
         else{
             section = 1

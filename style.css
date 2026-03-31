@@ -135,6 +135,7 @@ body{
     border-radius: 15px 15px 15px 15px;
     text-align: center;
     font-size: x-large;
+    order: 1;
 }
 
 .right::before {
@@ -163,6 +164,7 @@ body{
     border-radius: 15px 15px 15px 15px;
     text-align: center;
     font-size: x-large;
+    order: 1;
 }
 
 .left::before {
@@ -188,4 +190,10 @@ body{
     position: absolute;
     bottom: 50px;
     background-Color:white;
+}
+
+.rec{
+    background-Color: 'black';
+    order: 5;
+    position: absolute;
 }
