@@ -209,33 +209,15 @@ left1.addEventListener('click', function(){
         var cords = left1.getBoundingClientRect()
         pointBX = cords.x
         pointBY = cords.y
-        console.log(cords)
     }
     else {
         if(section != 'left'){
             var cords = left1.getBoundingClientRect()
-            pointAX = cords.x
-            pointAY = cords.y
             section = 1
-            if(pointAY > pointBY){
-                var cordY = pointBY + (pointAY - pointBY)
-                var cordX = pointBX / 2
-                var rec = document.createElement('div')
-                liner.appendChild(rec)
-                rec.className = 'rec'
-                rec.style.top = `${cordY}`
-                rec.style.left = `${cordX}`
-            }
-            else if(pointAY < pointBY){
-                var cordY = pointAY + (pointBY - pointAY);
-                var cordX = pointBX / 2;
-                var rec = document.createElement('div');
-                liner.appendChild(rec);
-                rec.className = 'rec';
-                rec.style.top = `${cordY}`;
-                rec.style.left = `${cordX}`;
-            };
-            console.log(cords);
+            var rec = document.createElement('div')
+            liner.appendChild(rec)
+            rec.className = 'rec'
+            recCord(pointAX, pointAY, pointBX, pointBY, rec)
         }
         else{
             section = 1
@@ -253,38 +235,15 @@ left2.addEventListener('click', function(){
         var cords = left2.getBoundingClientRect()
         pointBX = cords.x
         pointBY = cords.y
-        console.log(cords)
     }
     else {
         if(section != 'left'){
             var cords = left2.getBoundingClientRect()
-            pointAX = cords.x
-            pointAY = cords.y
             section = 1
-            ctx.moveTo(pointAX, pointAY)
-            ctx.lineTo(pointBX, pointBY)
-            ctx.lineTo(pointBX, pointBY + 5)
-            ctx.lineTo(pointAX, pointAY + 5)
-            ctx.fill()
-            console.log(cords)
-            if(pointAY > pointBY){
-                var cordY = pointBY + (pointAY - pointBY)
-                var cordX = pointBX / 2
-                var rec = document.createElement('div')
-                liner.appendChild(rec)
-                rec.className = 'rec'
-                rec.style.top = `${cordY}`
-                rec.style.left = `${cordX}`
-            }
-            else if(pointAY < pointBY){
-                var cordY = pointAY + (pointBY - pointAY);
-                var cordX = pointBX / 2;
-                var rec = document.createElement('div');
-                liner.appendChild(rec);
-                rec.className = 'rec';
-                rec.style.top = `${cordY}`;
-                rec.style.left = `${cordX}`;
-            };
+            var rec = document.createElement('div')
+            liner.appendChild(rec)
+            rec.className = 'rec'
+            recCord(pointAX, pointAY, pointBX, pointBY, rec)
         }
         else{
             section = 1
@@ -310,30 +269,10 @@ left3.addEventListener('click', function(){
             pointAX = cords.x
             pointAY = cords.y
             section = 1
-            ctx.moveTo(pointAX, pointAY)
-            ctx.lineTo(pointBX, pointBY)
-            ctx.lineTo(pointBX, pointBY + 5)
-            ctx.lineTo(pointAX, pointAY + 5)
-            ctx.fill()
-            console.log(cords)
-            if(pointAY > pointBY){
-                var cordY = pointBY + (pointAY - pointBY)
-                var cordX = pointBX / 2
-                var rec = document.createElement('div')
-                liner.appendChild(rec)
-                rec.className = 'rec'
-                rec.style.top = `${cordY}`
-                rec.style.left = `${cordX}`
-            }
-            else if(pointAY < pointBY){
-                var cordY = pointAY + (pointBY - pointAY);
-                var cordX = pointBX / 2;
-                var rec = document.createElement('div');
-                liner.appendChild(rec);
-                rec.className = 'rec';
-                rec.style.top = `${cordY}`;
-                rec.style.left = `${cordX}`;
-            };
+            var rec = document.createElement('div')
+            liner.appendChild(rec)
+            rec.className = 'rec'
+            recCord(pointAX, pointAY, pointBX, pointBY, rec)
         }
         else{
             section = 1
@@ -355,34 +294,15 @@ right1.addEventListener('click', function(){
     }
     else {
         if(section != 'right'){
-            var cords = left1.getBoundingClientRect()
+            var cords = right1.getBoundingClientRect()
             pointAX = cords.x
             pointAY = cords.y
             section = 1
-            ctx.moveTo(pointBX, pointBY)
-            ctx.lineTo(pointAX, pointAY)
-            ctx.lineTo(pointAX, pointAY + 5)
-            ctx.lineTo(pointBX, pointBY + 5)
-            ctx.fill()
             console.log(cords)
-            if(pointAY > pointBY){
-                var cordY = pointBY + (pointAY - pointBY)
-                var cordX = pointBX / 2
-                var rec = document.createElement('div')
-                liner.appendChild(rec)
-                rec.className = 'rec'
-                rec.style.top = `${cordY}`
-                rec.style.left = `${cordX}`
-            }
-            else if(pointAY < pointBY){
-                var cordY = pointAY + (pointBY - pointAY);
-                var cordX = pointBX / 2;
-                var rec = document.createElement('div');
-                liner.appendChild(rec);
-                rec.className = 'rec';
-                rec.style.top = `${cordY}`;
-                rec.style.left = `${cordX}`;
-            };
+            var rec = document.createElement('div')
+            liner.appendChild(rec)
+            rec.className = 'rec'
+            recCord(pointAX, pointAY, pointBX, pointBY, rec)
         }
         else{
             section = 1
@@ -404,34 +324,15 @@ right2.addEventListener('click', function(){
     }
     else {
         if(section != 'right'){
-            var cords = left1.getBoundingClientRect()
+            var cords = right2.getBoundingClientRect()
             pointAX = cords.x
             pointAY = cords.y
             section = 1
-            ctx.moveTo(pointBX, pointBY)
-            ctx.lineTo(pointAX, pointAY)
-            ctx.lineTo(pointAX, pointAY + 5)
-            ctx.lineTo(pointBX, pointBY + 5)
-            ctx.fill()
             console.log(cords)
-            if(pointAY > pointBY){
-                var cordY = pointBY + (pointAY - pointBY)
-                var cordX = pointBX / 2
-                var rec = document.createElement('div')
-                liner.appendChild(rec)
-                rec.className = 'rec'
-                rec.style.top = `${cordY}`
-                rec.style.left = `${cordX}`
-            }
-            else if(pointAY < pointBY){
-                var cordY = pointAY + (pointBY - pointAY);
-                var cordX = pointBX / 2;
-                var rec = document.createElement('div');
-                liner.appendChild(rec);
-                rec.className = 'rec';
-                rec.style.top = `${cordY}`;
-                rec.style.left = `${cordX}`;
-            };
+            var rec = document.createElement('div')
+            liner.appendChild(rec)
+            rec.className = 'rec'
+            recCord(pointAX, pointAY, pointBX, pointBY, rec)
         }
         else{
             section = 1
@@ -453,34 +354,15 @@ right3.addEventListener('click', function(){
     }
     else {
         if(section != 'right'){
-            var cords = left1.getBoundingClientRect()
+            var cords = right3.getBoundingClientRect()
             pointAX = cords.x
             pointAY = cords.y
             section = 1
-            ctx.moveTo(pointBX, pointBY)
-            ctx.lineTo(pointAX, pointAY)
-            ctx.lineTo(pointAX, pointAY + 5)
-            ctx.lineTo(pointBX, pointBY + 5)
-            ctx.fill()
             console.log(cords)
-            if(pointAY > pointBY){
-                var cordY = pointBY + (pointAY - pointBY)
-                var cordX = pointBX / 2
-                var rec = document.createElement('div')
-                liner.appendChild(rec)
-                rec.className = 'rec'
-                rec.style.top = `${cordY}`
-                rec.style.left = `${cordX}`
-            }
-            else if(pointAY < pointBY){
-                var cordY = pointAY + (pointBY - pointAY);
-                var cordX = pointBX / 2;
-                var rec = document.createElement('div');
-                liner.appendChild(rec);
-                rec.className = 'rec';
-                rec.style.top = `${cordY}`;
-                rec.style.left = `${cordX}`;
-            };
+            var rec = document.createElement('div')
+            liner.appendChild(rec)
+            rec.className = 'rec'
+            recCord(pointAX, pointAY, pointBX, pointBY, rec)
         }
         else{
             section = 1
@@ -511,5 +393,25 @@ function SendMessage(i){
         setTimeout(() => {  
             helpbar.remove();  
         }, 3000);
+    }
+}
+
+function recCord(ax, ay, bx, by, rec){
+    if (ay != by){
+        var height = 0
+        var width = 0
+        if (ay > by){
+            height = ay - by
+        }
+        else{
+            height = by - ay
+        }
+        if (ax > bx){
+            width = ax - bx - 100
+        }
+        else{
+            width = bx - ax - 100
+        }
+        rec.style.width = Math.sqrt(width^2 + height^2)
     }
 }
