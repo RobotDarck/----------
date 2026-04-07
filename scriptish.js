@@ -11,12 +11,9 @@ let fone = document.createElement('div')
 let lush = document.createElement('lu')
 let butres = document.createElement('button')
 let liner = document.createElement('div')
-let canvas = document.createElement('canvas')
 let rigtCollum = document.createElement('div')
 let leftCollum = document.createElement('div')
-let ctx = canvas.getContext("2d")
 
-liner.appendChild(canvas)
 liner.appendChild(rigtCollum)
 liner.appendChild(leftCollum)
 fone.appendChild(lush)
@@ -396,22 +393,34 @@ function SendMessage(i){
     }
 }
 
+//соединитель
 function recCord(ax, ay, bx, by, rec){
+    console.log(rec)
     if (ay != by){
         var height = 0
         var width = 0
         if (ay > by){
             height = ay - by
+            rec.style.top = `${by}`
         }
         else{
             height = by - ay
+            rec.style.top = `${ay}`
         }
         if (ax > bx){
             width = ax - bx - 100
+            rec.style.left = `${bx}`
         }
         else{
             width = bx - ax - 100
+            rec.style.left = `${ax}`
         }
-        rec.style.width = Math.sqrt(width^2 + height^2)
+        console.log(height)
+        console.log(width)
+        console.log(Math.asin(width / height))
+        rec.style.width = Math.sqrt(width ** 2 + height ** 2)
+        var ang = Math.asin(width / height)
+        rec.style.transform = `rotate(${ang}deg)`
+        rec.style.transformOrigin = 'top left'
     }
 }
