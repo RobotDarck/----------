@@ -164,7 +164,7 @@ but2.addEventListener('click', function(){
 
 //смена на ошибку 3
 but3.addEventListener('click', function(){
-    activ = 2
+    activ = 3
     if(but2res == false){
     remover()
     buttons.appendChild(liner)
@@ -395,8 +395,71 @@ function SendMessage(i){
 
 //соединитель
 function recCord(ax, ay, bx, by, rec){
-    console.log(rec)
-    if (ay != by){
+    console.log(ax, bx, ay, by)
+    if (ay ==  194.96875 && ay >= by ){
+        rec.style.top = `300px`
+        if(bx == 376.96875){
+            rec.style.transformOrigin = 'top left'
+            rec.style.transform = `rotate(45deg)`
+            rec.style.width = `100px`
+        }
+        else if (bx == 558.96875){
+            rec.style.transformOrigin = 'top left'
+            rec.style.transform = `rotate(77.5deg)`
+            rec.style.width = `100px`
+        }
+        else if (bx == ax){
+            rec.style.width = `100px`
+        }
+    }
+    else if(ay ==   376.96875 && ay > by ){
+        rec.style.top = `300px`
+        if (bx == 558.96875){
+            rec.style.transformOrigin = 'top left'
+            rec.style.transform = `rotate(45deg)`
+            rec.style.width = `100px`
+        }
+        else{
+            rec.style.width = `100px`
+        }
+    }
+    else if (ay ==  558.96875 && ay == by ){
+        rec.style.width = `100px`
+        rec.style.top = `300px`
+    }
+    else if (by ==  194.96875 && by >= ay ){
+        rec.style.top = `300px`
+        if(ax == 376.96875){
+            rec.style.transformOrigin = 'top left'
+            rec.style.transform = `rotate(-45deg)`
+            rec.style.width = `100px`
+        }
+        else if (ax == 558.96875){
+            rec.style.transformOrigin = 'top left'
+            rec.style.transform = `rotate(-77.5deg)`
+            rec.style.width = `100px`
+        }
+        else{
+            rec.style.width = `100px`
+        }
+    }
+    else if(ay ==   376.96875 && ay >= by ){
+        rec.style.top = `300px`
+        if (bx == 558.96875){
+            rec.style.transformOrigin = 'top left'
+            rec.style.transform = `rotate(45deg)`
+            rec.style.width = `100px`
+        }
+        else{
+            rec.style.width = `100px`
+        }
+    }
+    else if (ay ==  558.96875 && ay == by ){
+        rec.style.width = `100px`
+        rec.style.top = `300px`
+    }
+
+    /*if (ay != by){
         var height = 0
         var width = 0
         if (ay > by){
@@ -408,12 +471,12 @@ function recCord(ax, ay, bx, by, rec){
             rec.style.top = `${ay}`
         }
         if (ax > bx){
-            width = ax - bx - 100
+            width = ax - bx - 110
             rec.style.left = `${bx}`
         }
         else{
-            width = bx - ax - 100
-            rec.style.left = `${ax}`
+            width = bx - ax - 110
+            rec.style.left = `${bx}`
         }
         console.log(height)
         console.log(width)
@@ -422,5 +485,5 @@ function recCord(ax, ay, bx, by, rec){
         var ang = Math.asin(width / height)
         rec.style.transform = `rotate(${ang}deg)`
         rec.style.transformOrigin = 'top left'
-    }
+    }*/
 }
